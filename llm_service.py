@@ -20,7 +20,7 @@ class LLMService:
             if not GROQ_API_KEY:
                 raise ValueError("GROQ_API_KEY not found in environment variables")
             from groq import Groq
-            self.client = Groq(api_key='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')
+            self.client = Groq(api_key=GROQ_API_KEY)
             self.model_name = "llama-3.1-70b-versatile"
             print(f"✅ Initialized Groq (Llama 3.1 70B)")
             
